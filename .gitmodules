@@ -4,3 +4,6 @@
 [submodule "submodules/ios-store"]
 	path = submodules/ios-store
 url=https://github.com/stoulouse/ios-store.git
+[submodule "submodules/mac-store"]
+	path = submodules/mac-store
+	url = https://github.com/stoulouse/mac-store.git
