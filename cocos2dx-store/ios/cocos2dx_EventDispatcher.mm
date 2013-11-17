@@ -113,7 +113,8 @@
         cocos2dx_EventHandlers::getInstance()->restoreTransactionsStarted();
     }
     else if ([notification.name isEqualToString:EVENT_UNEXPECTED_ERROR_IN_STORE]) {
-        cocos2dx_EventHandlers::getInstance()->unexpectedErrorInStore();
+        int errorCode = [(NSNumber*)[notification.userInfo objectForKey:DICT_ELEMENT_ERROR_CODE] intValue];
+        cocos2dx_EventHandlers::getInstance()->unexpectedErrorInStore(errorCode);
     }
     
 

@@ -41,7 +41,7 @@ public:
     virtual void marketRefund(string& itemId) = 0;
     virtual void restoreTransactions(bool success) = 0;
 	virtual void restoreTransactionsStarted() = 0;
-    virtual void unexpectedErrorInStore() = 0;
+    virtual void unexpectedErrorInStore(const int errorId) = 0;
 };
 
 class cocos2dx_EventHandlers {
@@ -71,7 +71,7 @@ public:
     void marketRefund(string& itemId);
     void restoreTransactions(bool success);
 	void restoreTransactionsStarted();
-    void unexpectedErrorInStore();
+    void unexpectedErrorInStore(const int errorId);
 };
 
 #endif /* defined(__cocos2dx_store__cocos2dx_EventHandler__) */

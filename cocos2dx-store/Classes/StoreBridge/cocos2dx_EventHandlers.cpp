@@ -120,9 +120,9 @@ void cocos2dx_EventHandlers::restoreTransactionsStarted() {
 	for ( itr = handlers.begin(); itr != handlers.end(); itr++ )
 	    (*itr)->restoreTransactionsStarted();
 }
-void cocos2dx_EventHandlers::unexpectedErrorInStore() {
+void cocos2dx_EventHandlers::unexpectedErrorInStore(const int errorId) {
 	set<IEventHandler*>::iterator itr;
 	for ( itr = handlers.begin(); itr != handlers.end(); itr++ )
-	    (*itr)->unexpectedErrorInStore();
+	    (*itr)->unexpectedErrorInStore(errorId);
 }
 
