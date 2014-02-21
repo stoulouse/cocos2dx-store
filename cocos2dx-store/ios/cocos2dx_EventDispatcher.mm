@@ -32,7 +32,9 @@
 
 - (id) init {
     if (self = [super init]) {
+#if 0
         [EventHandling observeAllEventsWithObserver:self withSelector:@selector(eventFired:)];
+#endif
     }
     
     return self;
@@ -116,8 +118,6 @@
         int errorCode = [(NSNumber*)[notification.userInfo objectForKey:DICT_ELEMENT_ERROR_CODE] intValue];
         cocos2dx_EventHandlers::getInstance()->unexpectedErrorInStore(errorCode);
     }
-    
-
 }
 
 

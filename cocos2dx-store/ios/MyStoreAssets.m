@@ -29,8 +29,8 @@
 //
 //NSString* const NO_ADDS_NONCONS_PRODUCT_ID = @"no_ads";
 
-NSString* const LOGBOOK_NONCONS_PRODUCT_ID = @"logbook";
-NSString* const ALLPHOTOS_NONCONS_PRODUCT_ID = @"allPhotos";
+//NSString* const LOGBOOK_NONCONS_PRODUCT_ID = @"logbook";
+//NSString* const ALLPHOTOS_NONCONS_PRODUCT_ID = @"allPhotos";
 
 
 
@@ -57,8 +57,8 @@ NSString* const ALLPHOTOS_NONCONS_PRODUCT_ID = @"allPhotos";
 
 //NonConsumableItem* NO_ADDS_NON_CONS;
 
-NonConsumableItem* LOGBOOK_NON_CONS;
-NonConsumableItem* ALLPHOTOS_NON_CONS;
+//NonConsumableItem* LOGBOOK_NON_CONS;
+//NonConsumableItem* ALLPHOTOS_NON_CONS;
 
 
 + (void)initialize{
@@ -100,8 +100,8 @@ NonConsumableItem* ALLPHOTOS_NON_CONS;
 //    
 //    NO_ADDS_NON_CONS = [[NonConsumableItem alloc] initWithName:@"No Ads" andDescription:@"" andItemId:@"no_ads" andPurchaseType:[[PurchaseWithMarket alloc] initWithProductId:NO_ADDS_NONCONS_PRODUCT_ID andPrice:1.99]];
 
-    LOGBOOK_NON_CONS = [[NonConsumableItem alloc] initWithName:@"Logbook" andDescription:@"" andItemId:@"logbook" andPurchaseType:[[PurchaseWithMarket alloc] initWithProductId:LOGBOOK_NONCONS_PRODUCT_ID andPrice:0.99]];
-    ALLPHOTOS_NON_CONS = [[NonConsumableItem alloc] initWithName:@"All Photos" andDescription:@"" andItemId:@"allPhotos" andPurchaseType:[[PurchaseWithMarket alloc] initWithProductId:ALLPHOTOS_NONCONS_PRODUCT_ID andPrice:0.99]];
+//    LOGBOOK_NON_CONS = [[NonConsumableItem alloc] initWithName:@"Logbook" andDescription:@"" andItemId:@"logbook" andPurchaseType:[[PurchaseWithMarket alloc] initWithProductId:LOGBOOK_NONCONS_PRODUCT_ID andPrice:0.99]];
+//    ALLPHOTOS_NON_CONS = [[NonConsumableItem alloc] initWithName:@"All Photos" andDescription:@"" andItemId:@"allPhotos" andPurchaseType:[[PurchaseWithMarket alloc] initWithProductId:ALLPHOTOS_NONCONS_PRODUCT_ID andPrice:0.99]];
 
 }
 
@@ -158,7 +158,7 @@ NonConsumableItem* ALLPHOTOS_NON_CONS;
  */
 - (NSArray*)nonConsumableItems{
 //    return @[NO_ADDS_NON_CONS];
-	return @[LOGBOOK_NON_CONS, ALLPHOTOS_NON_CONS];
+	return nil;//@[LOGBOOK_NON_CONS, ALLPHOTOS_NON_CONS];
 }
 
 @end
