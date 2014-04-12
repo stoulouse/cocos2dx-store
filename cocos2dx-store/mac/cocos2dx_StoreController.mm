@@ -19,7 +19,7 @@
 #import "exceptions/VirtualItemNotFoundException.h"
 #import "exceptions/InsufficientFundsException.h"
 #import "exceptions/NotEnoughGoodsException.h"
-#import "MyStoreAssets.h"
+//#import "MyStoreAssets.h"
 #import "cocos2dx_EventDispatcher.h"
 #import "domain/PurchasableVirtualItem.h"
 #import "data/StoreInfo.h"
@@ -46,10 +46,13 @@ void cocos2dx_StoreController::initialize(string customSecret) {
      * We initialize StoreController when the application loads !
      *
      */
-    NSString * str = [[NSString alloc] initWithBytes:customSecret.c_str() length:strlen(customSecret.c_str()) encoding:NSUTF8StringEncoding];
-    [[StoreController getInstance] initializeWithStoreAssets:[[MyStoreAssets alloc] init] andCustomSecret:str];
-    
-    [cocos2dx_EventDispatcher initialize];
+	Class MyStoreAssets = NSClassFromString(@"MyStoreAssets");
+	if (MyStoreAssets) {
+		NSString * str = [[NSString alloc] initWithBytes:customSecret.c_str() length:strlen(customSecret.c_str()) encoding:NSUTF8StringEncoding];
+		[[StoreController getInstance] initializeWithStoreAssets:[[MyStoreAssets alloc] init] andCustomSecret:str];
+		[cocos2dx_EventDispatcher initialize];
+	}
+
 }
 
 void cocos2dx_StoreController::buyMarketItem(string productId) throw(cocos2dx_VirtualItemNotFoundException&) {

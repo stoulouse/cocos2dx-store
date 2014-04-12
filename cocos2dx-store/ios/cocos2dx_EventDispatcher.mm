@@ -32,7 +32,7 @@
 
 - (id) init {
     if (self = [super init]) {
-#if 0
+#if 1
         [EventHandling observeAllEventsWithObserver:self withSelector:@selector(eventFired:)];
 #endif
     }
